@@ -42,8 +42,8 @@ plot <- ggplot(data_subset, aes(x = ml, y = MW)) +
            label = equation, hjust = 0.5, vjust = -0.5, size = 5) +  # Centered equation
   theme_minimal() +
   theme(
-    axis.title.x = element_text(size = 13),
-    axis.title.y = element_text(size = 13)
+    axis.title.x = element_text(size = 14),
+    axis.title.y = element_text(size = 14)
   )
 
 # Add vertical line and horizontal line from the intersection
@@ -64,7 +64,7 @@ if (nrow(data) >= 6) {
     annotate("text", x = ml_value_row6, y = 1,
              label = paste("Volume [mL] =", ml_value_row6), vjust = 1.5, hjust = 0.5, size = 5) +
     annotate("text", x = min(data$ml, na.rm = TRUE), y = predicted_mw_row6,
-             label = paste("MW [kDa] =", round(predicted_mw_row6, 2)), hjust = 1.0, vjust = -0.5, size = 5)
+             label = paste("MW [kDa] =", round(predicted_mw_row6, 2)), hjust = 0.9, vjust = -0.5, size = 5)
 }
 
 # Display the plot
